@@ -1,0 +1,26 @@
+/*Dropdown Styles*/
+
+/*select - hover and focus style*/
+select{
+	margin: 0px 0px 25px 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	background: #fff;
+	color: #7c7771;
+	font-style: normal;
+	border-bottom-color: #d6d2cf;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:hover{
+	color: #0c8397;
+	font-weight: bold;
+	background: #cee6ea;
+}
+
+select:focus{
+	color: #0c8397;
+	font-weight: bold;
+}

@@ -1,0 +1,25 @@
+<!-- Bank - Main View -->
+<div class="container">
+	<div class="row">
+		<!-- Logo -->
+		<div id="logo" class="col-xs-offset-1">
+			<img src="app/assets/logo.jpg" alt="logo-Peachtree_Bank">
+		</div>
+		<!-- Main Content -->
+		<div class="row content">
+			
+			<!-- Transfer form -->
+			<div class="col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 transfers">
+				<transfers [merchantsList]="merchantsList" [transfers]="transactions" [balance]="balance" 
+							(send)="updateTransactions($event)">
+				</transfers>
+			</div>
+
+			<!-- Transactions grid -->
+			<div class="col-md-6 col-sm-5 col-xs-12 margin-l-40">
+				<transactions-detail [transactions]="transactions">
+				</transactions-detail>
+			</div>
+		</div>
+	</div>
+</div>

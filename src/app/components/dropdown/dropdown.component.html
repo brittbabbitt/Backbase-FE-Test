@@ -1,0 +1,8 @@
+<!-- Dropdown - Merchant Selection -->
+<div>
+    <select class="col-xs-12 no-padding" 
+    	(change)="onChange($event.target.value)" >
+        <option class="no-margin" *ngFor="let merch of merchants"
+        	[ngValue]="merch" [selected]="merch === merchantSelected ? true: false">{{merch}}</option>
+    </select>
+</div>

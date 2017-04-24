@@ -1,0 +1,31 @@
+/*Grid Styles*/
+
+/*Merchan Logos*/
+.thumbnail{
+	min-width: 50px;
+	border-left: none;
+	border-right: none;
+}
+
+/*Align grid colums*/
+.v-align, .v-align>div{
+	vertical-align: middle;
+}
+
+/*Scrolling setting*/
+.panel-content{
+	overflow: auto;
+	min-height: 305px;
+	max-height: 700px;
+}
+
+/*Add row borders*/
+.table>tbody>tr{
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+/*Date size*/
+span{
+	font-size: 12px;
+}

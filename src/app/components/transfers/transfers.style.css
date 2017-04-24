@@ -1,0 +1,48 @@
+/*Form Styles*/
+
+/*Container - usd and input styling alignment*/
+.money{
+	color: #7c7771;
+	font-size: 14px;
+	border-bottom-style: solid;
+	border-bottom-color: #d6d2cf;
+	border-bottom-width: 1px;
+}
+
+/*Waring for amount input errors*/
+.text-danger{
+	font-size: 12px;
+}
+
+/*Remove form defaults - set bottom padding*/
+.transfer-form{
+	padding: 0px;
+	padding-bottom: 30px
+}
+
+/*Remove input defaults*/
+input, input:focus { 
+	float: right;	/*usd sign alignment*/
+	margin-bottom: 20px;
+	border-style: none;
+	border-bottom-style: solid;
+	border-bottom-color: #d6d2cf;
+	border-bottom-width: 1px;
+	background: #fff;
+}
+
+/** Responsive View **/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    .form-group{
+		margin: 0 20px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.form-group{
+		margin: 0;
+    }
+}

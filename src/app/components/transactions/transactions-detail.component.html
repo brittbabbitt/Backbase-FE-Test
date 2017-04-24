@@ -1,0 +1,37 @@
+
+<!--Header-->
+<div class="header row">
+  <!-- icon -->
+  <div class="icon col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1">
+    <i class={{icon}} aria-hidden="true"></i>
+  </div>
+  <!-- header title -->
+  <div class="col-lg-8 col-lg-offset-3 col-xs-8 col-xs-offset-1">
+    <h5>{{headerTitle}}</h5>
+  </div>
+</div> 
+
+<!--Grid Section-->
+<div class="row panel-content"> 
+  <table class="table table-responsive">
+    <tr class="borders" *ngFor="let item of transactions">
+    <!-- Date -->
+      <td class="col-xs-2 text-center v-align"
+          [ngStyle]="{ 'border-left-color': item.categoryCode,
+                        'border-left-width': '5px',
+                        'border-left-style': 'solid' }">
+                        <span>{{item.transactionDate | date: 'MMM dd'}}</span></td>
+      <!-- Merchant Logos -->
+      <td class="col-xs-1 thumbnail"><img src="{{item.merchantLogo}}"/></td>
+      <td class="col-xs-8 v-align">
+      <!-- Merchant Name and Type of Transaction -->
+        <h5><strong>{{item.merchant}}</strong></h5>
+        <h6>{{item.transactionType}}</h6>
+      </td>
+      <!-- Amount Charged -->
+      <td class="col-xs-1 text-right v-align">
+        <div><strong>-{{item.amount | currency:'USD':true }}</strong></div>
+      </td>
+    </tr>
+  </table>
+</div>

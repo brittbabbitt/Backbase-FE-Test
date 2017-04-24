@@ -1,0 +1,164 @@
+/*
+Main Styles
+#description: css styles to override colors, heights, and images;
+
+##--color specs--
+light-orange: #ee7033;
+orange: #ed6f35;
+dark-orange: #ffe1d3;
+blue: #0c8397;
+light-blue:#cee6ea;
+light-grey: #d6d2cf;
+dark-grey: #7c7771;
+
+submit_button-orange: #ee7033;
+icons: #cee6ea;
+*/
+
+/*Logo and body wrapper*/
+#wrapper{
+	margin: 20px auto;
+}
+
+#logo img{
+	height: 25px;
+	margin: 20px 0px 10px 0px;
+}
+
+/**Headers and Icons for Panels**/
+.header{
+	margin-top: 20px;
+	background-color: #0c8397;
+}
+
+.header h5{
+	color: #cee6ea;
+}
+
+.icon{
+	margin-top: 8px;
+	font-size: 16px;
+	color: #cee6ea;
+}
+
+/**Content**/
+.panel-content{
+	background-color: #fff;
+	padding: 30px 15px 0px 15px;
+}
+
+.content{
+	background-image: url(../assets/background.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-top: 1px solid #ed6f35;
+    padding-bottom: 30px;
+}
+
+/**Components and USD sign**/
+.transfers{
+	min-width: 310px;
+}
+
+.usd-sign::first-letter {
+  	padding-right: 10px;
+}
+
+.preview{
+	margin-top: 30px;
+}
+
+/**Common Shared tags**/
+.no-padding{
+	padding: 0px;
+}
+.no-margin{
+	margin: 0px;
+}
+
+/**Buttons**/
+.btn, .btn:focus, .btn:active{
+	margin-bottom: 30px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+.btn-primary{
+	color:#ffe1d3;
+	background-color:#ee7033;
+	border-color: #ee7033;
+	outline: 0;
+}
+
+.btn-primary:hover, .btn-primary:focus{
+	color:#ee7033;
+	background-color:#ffe1d3;
+	outline: 0;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ee7033;
+}
+
+.btn-primary:active{
+	color:#ee7033 !important;
+	background-color:#ffe1d3 !important;
+	border: none !important;
+}
+
+.btn-primary.disabled:hover, .btn-primary.disabled:focus{
+	background-color:#ee7033;
+}
+
+.btn-outline-primary{
+	color:#0c8397;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #0c8397;
+	outline: 0;
+	background-color: #cee6ea;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus{
+	color:#cee6ea;
+	background-color:#0c8397;
+}
+
+
+
+/** Responsive View **/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+	/*spacing between form and grid*/
+    .margin-l-40{
+    	margin-left: 0;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+	/*spacing between form and grid*/
+	.margin-l-40{
+    	margin-left: 40px;
+    }
+}
+
+/**Common HTML tags**/
+h6{
+	margin: 0px;
+	padding: 0px;
+	font-size: 11px;
+}
+
+td>h5{
+	margin: 0px;
+}
+
+/*overall font-style*/
+body{
+	font-family: 'Kanit', sans-serif !important;
+}

@@ -1,0 +1,75 @@
+<!--Header-->
+<div class="header row">
+  <!-- icon -->
+  <div class="icon col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1">
+    <i class={{icon}} aria-hidden="true"></i>
+  </div>
+  <!-- header title -->
+  <div class="col-lg-8 col-lg-offset-2 col-xs-8 col-xs-offset-1">
+    <h5>{{headerTitle}}</h5>
+  </div>
+</div> 
+
+<!--Form Section-->
+<div class="row panel-content">
+  <form class="transfer-form">
+    
+    <!-- From -->
+    <div class="form-group">
+      <label class="col-xs-12 no-padding" for="fromAccount">
+        <h6><strong>FROM ACCOUNT</strong></h6>
+      </label>
+      <!-- input - disabled - CONST -->
+      <input class="col-xs-12 no-padding" disabled="true" 
+            type="text" name="fromAccount" placeholder="Free Checking(4692) - Available {{balance | currency:'USD':true}}"
+            [ngModel]="fromAccount"/>
+    </div>
+
+    <!-- To -->
+    <div class="form-group">
+      <label class="col-xs-12 no-padding" for="merchant">
+        <h6><strong>TO ACCOUNT</strong></h6>
+      </label>
+      <!-- dropdown - Merchants Selection -->
+      <dropdown [merchants]="merchantsList" [merchantSelected]="merchantSelected"
+                (merchant)="onSelectMerchant($event)">
+      </dropdown>  
+    </div>
+
+    <!-- Amount -->
+    <div class="form-group">
+      <label class="col-xs-12 no-padding" for="Amount">
+        <h6><strong>AMOUNT</strong></h6>
+      </label>
+
+      <!-- Amount - Input -->
+      <div class="money">
+        <!-- usd sign -->
+        <span class="usd-sign">$</span>
+        <!-- input - text -->
+        <input class="col-xs-11 no-margin no-padding" 
+          type="text" name="amount" value="amount"
+          [ngModel]="amount | number:'1.2-2'" 
+          (ngModelChange) ="onKeypress($event)"
+          (focus)="onFocus()" 
+          (blur)="onBlur($event.target.value)"/>
+      </div>
+
+      <!-- Error for Amount Input -->
+      <label class="text-danger" *ngIf="!isValidAmount">{{ errorAmount }}</label>
+    </div>
+
+    <!-- Preview -->
+    <div class="preview" *ngIf="hide">
+      <preview [toAccount] = "merchantSelected" [amount] = "amount" 
+                (notify)="onNotify($event)"></preview>
+    </div>
+  </form>
+  <!-- Submit Button -->
+  <div class="col-xs-8 col-xs-offset-2" [hidden]="hide">
+    <button class="btn btn-md btn-primary btn-block"
+            [ngClass]="{'disabled': !isAmountSet}"
+            type="button" (click)="onClick()">Submit
+    </button>
+  </div>
+</div>

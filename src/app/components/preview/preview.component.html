@@ -1,0 +1,32 @@
+<!--Header-->
+<div class="header row">
+   <!-- Header title -->
+   <div class="col-lg-8 col-lg-offset-2 col-xs-8 col-xs-offset-1">
+     <h5>{{headerTitle}}</h5>
+   </div>
+</div> 
+
+<!-- Preview -->
+<div class="col-xs-12 preview">
+	<!-- From -->
+	<label><h6><strong>FROM ACCOUNT</strong></h6></label>
+	<p>{{fromAccount}}</p>
+	<!-- To -->
+	<label><h6><strong>TO ACCOUNT</strong></h6></label>
+	<p>{{toAccount}}</p>
+	<!-- Amount -->
+	<label><h6><strong>AMOUNT</strong></h6></label>
+	<p class="usd-sign">{{amount | currency:'USD':true}}</p>
+	
+	<!-- Buttons -->
+	<div class="row">
+		<!-- Cancel -->
+		<div class="col-xs-6">
+			<button class="btn btn-outline-primary btn-block" (click)="onNotify('cancel')">Cancel</button>
+		</div>
+		<!-- Confirm -->
+		<div class="col-xs-6">	
+			<button class="btn btn-primary btn-block" (click)="onNotify('confirm')">Transfer</button>
+		</div>
+	</div>
+</div>
