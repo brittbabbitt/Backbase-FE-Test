@@ -49,6 +49,7 @@ Displays a list of Transactions.
 
 ### File Structure
 
+```
 /Backbase-Test-Babbitt
 	-/src
 		-/app
@@ -69,20 +70,22 @@ Displays a list of Transactions.
 			-bank.component.html
 			-bank.component.ts
 			-bank.module.ts
+```
 
 ### Assets
 *consists of*: background.jpg, logo.jpg, and transactions.json
 *challenges*: icons didn't have transparent background, so I added font-awesome and used the same type of icon with their help.
 
 ### Components Model
-	  	      
+```	  	      
 	  	      Root: Bank Component - app/bank.component.html
-
+```
 					Bank Component
 						/   \
 				Transfers	Transactions
 				  /  \
 		   Dropdown  Preview
+```
 
 #### Service Communication: TransactionService
 
