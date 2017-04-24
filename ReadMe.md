@@ -79,7 +79,7 @@ Displays a list of Transactions.
 ### Components Model
 ```	  	      
 	  	      Root: Bank Component - app/bank.component.html
-```
+
         Bank Component
           /     \
   Transfers     Transactions
