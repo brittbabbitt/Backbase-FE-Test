@@ -80,11 +80,12 @@ Displays a list of Transactions.
 ```	  	      
 	  	      Root: Bank Component - app/bank.component.html
 ```
-					Bank Component
-						/   \
-				Transfers	Transactions
-				  /  \
-		   Dropdown  Preview
+        Bank Component
+          /     \
+  Transfers     Transactions
+      /  \
+Dropdown  Preview
+
 ```
 
 #### Service Communication: TransactionService
