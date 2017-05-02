@@ -35,6 +35,8 @@ Functions:
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { HeaderComponent } from '../../components/header/header.component';
+
 import { Transaction } from '../transactions/transaction';
 import { DropdownComponent } from '../../components/dropdown/dropdown.component';
 import { PreviewComponent } from '../../components/preview/preview.component';

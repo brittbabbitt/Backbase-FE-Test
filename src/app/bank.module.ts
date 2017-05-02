@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { BankComponent } from './bank.component';
+import { HeaderComponent } from './components/header/header.component';
 
 import { TransfersComponent } from './components/transfers/transfers.component';
 import { TransactionsDetailComponent } from './components/transactions/transactions-detail.component';
@@ -19,6 +20,7 @@ import { PreviewComponent } from './components/preview/preview.component';
 			],
   declarations: [ 
   					BankComponent, 
+            HeaderComponent,
   					TransfersComponent, 
   					TransactionsDetailComponent,
             DropdownComponent,
